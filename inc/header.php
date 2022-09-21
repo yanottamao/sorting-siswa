@@ -1,6 +1,7 @@
 <?php include 'config/database.php' ?>
 <?php include 'inc/konversi.php' ?>
 <?php $akun = 'logout'; ?>
+<?php date_default_timezone_set('Asia/Jakarta'); ?>
 
 
 <!doctype html>
