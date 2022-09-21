@@ -133,24 +133,26 @@ if (isset($_GET['submit'])) {
             <p class="lead mt-3">Belum ada data!</p>
         <?php endif; ?>
 
-        <?php foreach ($sort as  $value) : ?>
-            <?php if ($value['alumni'] == 0) {
-                $value['alumni'] = 'Bukan';
-            } else {
-                $value['alumni'] = 'Ya';
-            } ?>
-            <div class="card my-3">
-                <div class="card-body text-center">
-                    <?php echo strtoupper($value['nama']); ?>
-                    <div class="text-secondary">
-                        Kejuruan : <?php echo konv_kej($value['kejuruan']) . '<br/>'; ?>
-                        Sub kejuruan : <?php echo konv_sub_kejuruan($value['sub_kejuruan']) . '<br/>'; ?>
-                        Pendidikan Terakhir : <?php echo konv_pendidikan($value['pendidikan']) . '<br/>'; ?>
-                        Alumni : <?php echo konv_alumni($value['alumni']); ?>
+        <?php if (!empty($sort)) : ?>
+            <?php foreach ($sort as  $value) : ?>
+                <?php if ($value['alumni'] == 0) {
+                    $value['alumni'] = 'Bukan';
+                } else {
+                    $value['alumni'] = 'Ya';
+                } ?>
+                <div class="card my-3">
+                    <div class="card-body text-center">
+                        <?php echo strtoupper($value['nama']); ?>
+                        <div class="text-secondary">
+                            Kejuruan : <?php echo konv_kej($value['kejuruan']) . '<br/>'; ?>
+                            Sub kejuruan : <?php echo konv_sub_kejuruan($value['sub_kejuruan']) . '<br/>'; ?>
+                            Pendidikan Terakhir : <?php echo konv_pendidikan($value['pendidikan']) . '<br/>'; ?>
+                            Alumni : <?php echo konv_alumni($value['alumni']); ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 </div>
 
