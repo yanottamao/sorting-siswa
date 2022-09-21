@@ -4,7 +4,7 @@
 $id = 0;
 setcookie('id', $id);
 
-$sql = 'SELECT * FROM data_siswa_v3';
+$sql = 'SELECT * FROM data_siswa_v4';
 $result = mysqli_query($conn, $sql);
 $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -102,7 +102,7 @@ $nomor_urut = 1;
                     <td>
                         <div class="d-flex">
                             <a href="edit.php?id=<?php echo $value['id'] ?>"><button type="button" class="btn btn-warning m-1"><i class="bi bi-pencil"></i> Edit</button></a>
-                            <a href="delete.php?id=<?php echo $value['id'] ?>"><button type="button" class="btn btn-danger m-1"><i class="bi bi-x-circle"></i> Hapus</button></a>
+                            <a href="delete.php?id=<?php echo $value['id'] ?>" onclick="return confirm('Yakin hapus?')"><button type="button" class="btn btn-danger m-1"><i class="bi bi-x-circle"></i> Hapus</button></a>
                         </div>
                     </td>
                 </tr>
