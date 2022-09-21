@@ -22,7 +22,7 @@ $userID = $_SESSION['userID'];
         <div id="content" class="text-center">
             <h1>Selamat Datang <?php echo $username; ?></h1>
             <p class="fs-4">Silakan pilih menu dari navigasi di atas.</p>
-            <h3 style="color:blue;"><?php echo "Hari ini " .  "  " . date("d F Y") . " - " . date("l") . "" ?>&nbsp; <?php echo "" . date("G:i:s e") . "" ?></h3>
+            <h3 style="color:blue;"><?php echo "Hari ini " . konv_hari(date('l')) .  ", " . date("d F Y") . " - " . date("G:i:s") . "" ?></h3>
 
             <hr style="border:1px solid red;">
 
