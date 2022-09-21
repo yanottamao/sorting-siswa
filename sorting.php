@@ -120,7 +120,7 @@ if (isset($_GET['submit'])) {
 
 <div class=" text-center mx-auto">
     <h2>Sortir Data</h2>
-    <div class="w-50">
+    <div class="w-50 mx-auto">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="GET" class="mt-4 d-grid">
             <?php include 'inc/form_isi_2.php'; ?>
 
