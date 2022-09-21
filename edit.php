@@ -2,7 +2,7 @@
 
 <?php
 
-$sql = "SELECT * FROM data_siswa_v2 WHERE id=" . $_GET['id'];
+$sql = "SELECT * FROM data_siswa_v4 WHERE id=" . $_GET['id'];
 $result = mysqli_query($conn, $sql);
 $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -115,7 +115,7 @@ if (isset($_POST['submit'])) {
 
     // add to database
     if (empty($nameErr) && empty($kejuruanErr) && empty($pendidikanErr) && empty($alamatErr) && empty($alumniErr)) {
-        $sql = "UPDATE data_siswa_v2 SET nomor_induk='$no_induk', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', kejuruan='$kejuruan', sub_kejuruan='$sub_kejuruan', lama_latih='$lama_latih', tanggal_mulai='$tanggal_mulai', tanggal_akhir='$tanggal_akhir', pendidikan='$pendidikan', alamat='$alamat', nomor_telepon='$nomor_telepon', keterangan='$keterangan', alumni='$alumni' WHERE id=" . $_GET['id'];
+        $sql = "UPDATE data_siswa_v4 SET nomor_induk='$no_induk', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', kejuruan='$kejuruan', sub_kejuruan='$sub_kejuruan', lama_latih='$lama_latih', tanggal_mulai='$tanggal_mulai', tanggal_akhir='$tanggal_akhir', pendidikan='$pendidikan', alamat='$alamat', nomor_telepon='$nomor_telepon', keterangan='$keterangan', alumni='$alumni' WHERE id=" . $_GET['id'];
         if (mysqli_query($conn, $sql)) {
             // success add
             header('Location: list.php');

@@ -118,7 +118,7 @@ if (isset($_POST['submit'])) {
 
     // add to database
     if (empty($nameErr) && empty($kejuruanErr) && empty($pendidikanErr) && empty($alamatErr) && empty($alumniErr)) {
-        $sql = "INSERT INTO data_siswa_v2 (nomor_induk, nama, tempat_lahir, tanggal_lahir, kejuruan, sub_kejuruan, lama_latih, tanggal_mulai, tanggal_akhir, pendidikan, alamat, nomor_telepon, keterangan, alumni) VALUES ('$no_induk','$nama','$tempat_lahir','$tanggal_lahir','$kejuruan','$sub_kejuruan','$lama_latih','$tanggal_mulai','$tanggal_akhir','$pendidikan','$alamat','$no_telepon','$keterangan','$alumni')";
+        $sql = "INSERT INTO data_siswa_v4 (nomor_induk, nama, tempat_lahir, tanggal_lahir, kejuruan, sub_kejuruan, lama_latih, tanggal_mulai, tanggal_akhir, pendidikan, alamat, nomor_telepon, keterangan, alumni) VALUES ('$no_induk','$nama','$tempat_lahir','$tanggal_lahir','$kejuruan','$sub_kejuruan','$lama_latih','$tanggal_mulai','$tanggal_akhir','$pendidikan','$alamat','$no_telepon','$keterangan','$alumni')";
         if (mysqli_query($conn, $sql)) {
             // success add
             header('Location: list.php');
