@@ -7,31 +7,21 @@ include 'session.php';
 $username = $_SESSION['username'];
 $userID = $_SESSION['userID'];
 ?>
-<!DOCTYPE html>
-<html>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="mycss.css">
-    <title>
-        This is Sample
-    </title>
-</head>
+<div id="body">
+    <div id="content" class="text-center">
+        <h1>Selamat Datang <?php echo $username; ?></h1>
+        <p class="fs-4">Silakan pilih menu dari navigasi di atas.</p>
+        <h3 style="color:blue;"><?php echo "Hari ini " . konv_hari(date('l')) .  ", " . date("d F Y") . " - " . date("G:i:s") . "" ?></h3>
 
-<body>
-    <div id="body">
-        <div id="content" class="text-center">
-            <h1>Selamat Datang <?php echo $username; ?></h1>
-            <p class="fs-4">Silakan pilih menu dari navigasi di atas.</p>
-            <h3 style="color:blue;"><?php echo "Hari ini " . konv_hari(date('l')) .  ", " . date("d F Y") . " - " . date("G:i:s") . "" ?></h3>
+        <hr style="border:1px solid red;">
 
-            <hr style="border:1px solid red;">
-
-
-
-        </div>
 
 
     </div>
+
+
+</div>
 </body>
 
 </html>

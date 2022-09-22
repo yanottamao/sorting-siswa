@@ -25,26 +25,26 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
         <div class="container">
-            <a class="navbar-brand" href="#">PANGKALAN DATA SINGOSARI</a>
+            <a class="navbar-brand" href="home.php">PANGKALAN DATA SINGOSARI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/sorting-siswa-v4/home.php">Home</a>
+                        <a class="nav-link" href="/sorting-siswa-v4/home.php"><i class="bi bi-house"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/sorting-siswa-v4/tambah.php">Tambah</a>
+                        <a class="nav-link" href="/sorting-siswa-v4/tambah.php"><i class="bi bi-plus-circle"></i> Tambah</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/sorting-siswa-v4/list.php">List</a>
+                        <a class="nav-link" href="/sorting-siswa-v4/list.php"><i class="bi bi-list"></i> List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/sorting-siswa-v4/sorting.php">Sorting</a>
+                        <a class="nav-link" href="/sorting-siswa-v4/sorting.php"><i class="bi bi-funnel"></i> Sorting</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/sorting-siswa-v4/<?php echo $akun ?>.php"><?php echo ucfirst($akun); ?></a>
+                        <a class="nav-link" href="/sorting-siswa-v4/<?php echo $akun ?>.php"><i class="bi bi-box-arrow-right"></i> <?php echo ucfirst($akun); ?></a>
                     </li>
                 </ul>
             </div>
