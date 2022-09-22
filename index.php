@@ -30,7 +30,7 @@
             <p class="lead mb-4">Untuk melakukan penambahan dan melihat data yang sudah ada di database, silakan melakukan login terlebih dahulu.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="login.php"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Login</button></a>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Informasi Pelatihan</button>
+                <a href="informasi-pelatihan.php"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Informasi Pelatihan</button></a>
             </div>
         </div>
     </div>
