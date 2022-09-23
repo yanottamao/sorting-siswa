@@ -144,7 +144,7 @@ if (isset($_GET['submit'])) {
                         $value['alumni'] = 'Ya';
                     } ?>
                     <div class="card m-3 col-3">
-                        <img src="..." class="card-img-top mt-3" alt="Foto siswa" style="max-height: 320px; max-height: 240px;">
+                        <!-- <img src="..." class="card-img-top mt-3" alt="Foto siswa" style="max-height: 320px; max-height: 240px;"> -->
                         <div class="card-body text-center">
                             <div class="card-title m-1 fw-bold fs-5">
                                 <?php echo strtoupper($value['nama']); ?>

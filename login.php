@@ -1,4 +1,7 @@
-<?php include 'inc/header.php'; ?>
+<?php // include 'inc/header.php'; 
+?>
+<?php include 'config/database.php' ?>
+
 <?php session_start();
 // echo $_SESSION['userID'];
 ?>
@@ -46,30 +49,42 @@ if (isset($_SESSION['userID'])) {
     // window.location = 'home.php';
 </script>
 
+<!doctype html>
+<html lang="id">
 
-<div class="form-signin w-50 text-center mx-auto">
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <h1 class="h3 mb-3 fw-normal">Silakan Login</h1>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
-            <label for="floatingInput">Username</label>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
-            <label for="floatingPassword">Password</label>
-        </div>
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Ingat saya
-            </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">Login</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
-    </form>
-</div>
+    <title>Pangkalan Data Singosari</title>
+</head>
+
+<body>
+    <div class="form-signin w-50 text-center mx-auto">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+
+            <h1 class="h3 mb-3 fw-normal">Silakan Login</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
+                <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                <label for="floatingPassword">Password</label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">Login</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+        </form>
+    </div>
 
 
-<?php include 'inc/footer.php'; ?>
+    <?php include 'inc/footer.php'; ?>
